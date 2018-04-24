@@ -16,6 +16,8 @@ namespace Vega.Mapping
 
             CreateMap<Model, ModelResource>();
 
+            CreateMap<Feature, FeatureResource>();
+
         }
     }
 }
