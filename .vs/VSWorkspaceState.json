@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Vega",
+    "\\Vega\\ClientApp",
+    "\\Vega\\ClientApp\\app",
+    "\\Vega\\ClientApp\\app\\components",
+    "\\Vega\\ClientApp\\app\\components\\vehicle-form",
     "\\Vega\\Models"
   ],
-  "SelectedNode": "\\Vega\\node_modules",
+  "SelectedNode": "\\Vega\\ClientApp\\app\\components\\vehicle-form\\vehicle-form.component.html",
   "PreviewInSolutionExplorer": false
 }
