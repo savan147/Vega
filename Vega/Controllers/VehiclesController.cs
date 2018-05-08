@@ -6,7 +6,8 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vega.Controllers.Resources;
-using Vega.Models;
+using Vega.Core;
+using Vega.Core.Models;
 using Vega.Persistence;
 
 namespace Vega.Controllers
@@ -22,7 +23,7 @@ namespace Vega.Controllers
        
 
         //Constructor
-        public VehiclesController(IMapper mapper, IUnitOfWork unitOfWork, IVehicleRepository repository)
+        public VehiclesController(IMapper mapper, IVehicleRepository repository, IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
             this.mapper = mapper;
@@ -52,7 +53,9 @@ namespace Vega.Controllers
 
             
             await unitOfWork.CompleteAsync();
+
             vehicle = await repository.GetVehicle(vehicle.Id);
+
             var result = mapper.Map<Vehicle, VehicleResource>(vehicle);
             return Ok(result);
         }

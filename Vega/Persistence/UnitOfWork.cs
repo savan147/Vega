@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-
+using Vega.Core;
 namespace Vega.Persistence
 {
     public class UnitOfWork : IUnitOfWork
@@ -17,11 +17,5 @@ namespace Vega.Persistence
            await context.SaveChangesAsync();
         }
 
-       
-
-        Task IUnitOfWork.CompleteAsync()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
