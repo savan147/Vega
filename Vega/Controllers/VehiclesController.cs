@@ -16,10 +16,10 @@ namespace Vega.Controllers
     [Route("/api/vehicles")]    // its apply to all action in this controller
     public class VehiclesController : Controller
     {
-        private readonly IUnitOfWork unitOfWork;
+        private readonly Core.IUnitOfWork unitOfWork;
         private readonly IMapper mapper;
        // private readonly VegaDbContext context;
-        private readonly IVehicleRepository repository;
+        private readonly Core.IVehicleRepository repository;
        
 
         //Constructor
