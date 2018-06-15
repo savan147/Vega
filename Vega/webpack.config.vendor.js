@@ -7,11 +7,13 @@ const treeShakableModules = [
     '@angular/common',
     '@angular/compiler',
     '@angular/core',
+    '@angular/router',
     '@angular/forms',
     '@angular/http',
     '@angular/platform-browser',
     '@angular/platform-browser-dynamic',
-    '@angular/router',
+    
+    'underscore',
     'zone.js',
 ];
 const nonTreeShakableModules = [
