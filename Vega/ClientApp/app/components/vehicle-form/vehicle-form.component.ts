@@ -103,7 +103,7 @@ export class VehicleFormComponent implements OnInit {
         }
         else {
             this.vehicleService.create(this.vehicle)
-                .subscribe(x => console.log(x));
+                .subscribe(x => console.log('Errors not save proper'));
         }
 
     }
